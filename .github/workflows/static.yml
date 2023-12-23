@@ -38,11 +38,12 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          cd app
+          npm install
 
       - name: Build React App
         run: |
-          cd app
           npm run build
         
       - name: Setup Pages
